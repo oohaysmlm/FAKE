@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>CommandEnvironment - FAKE - F# Make</title>
+    <title>VSTest - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,180 +36,94 @@
 
 
 
-<h1>CommandEnvironment</h1>
+<h1>VSTest</h1>
 <div class="xmldoc">
-<p>Abstracts over command-line environment features.</p>
+<p>Contains tasks to run <a href="https://msdn.microsoft.com/en-us/library/ms182486.aspx">VSTest</a> unit tests.</p>
 </div>
-  <h3>Constructors</h3>
-  <table class="table table-bordered member-list">
+
+<!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
+      <table class="table table-bordered type-list">
     <thead>
-      <tr><td>Constructor</td><td>Description</td></tr>
+      <tr><td>Type</td><td>Description</td></tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '898', 898)" onmouseover="showTip(event, '898', 898)">
-            new()
-          </code>
-          <div class="tip" id="898">
-            <strong>Signature:</strong> unit -&gt; CommandEnvironment<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L87-87" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
+        <tr>
+          <td class="type-name">
+            <a href="fake-vstest-errorlevel.html">ErrorLevel</a>
+          </td>
+          <td class="xmldoc"><p>Option which allow to specify if a VSTest error should break the build.</p>
+</td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="fake-vstest-vstestparams.html">VSTestParams</a>
+          </td>
+          <td class="xmldoc"><p>Parameter type to configure <a href="https://msdn.microsoft.com/en-us/library/jj155800.aspx">VSTest.Console.exe</a></p>
+</td>
+        </tr>
     </tbody>
   </table>
-  <h3>Instance members</h3>
+
+  </div>
+
+  <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
+      <tr><td>Function or value</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '899', 899)" onmouseover="showTip(event, '899', 899)">
-            CurrentDirectory
+          <code onmouseout="hideTip(event, '604', 604)" onmouseover="showTip(event, '604', 604)">
+            VSTest setParams assemblies
           </code>
-          <div class="tip" id="899">
-            <strong>Signature:</strong> string<br />
-              <strong>Modifiers:</strong> abstract<br />
+          <div class="tip" id="604">
+            <strong>Signature:</strong> setParams:(VSTestParams -&gt; VSTestParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L89-89" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/VSTest.fs#L120-120" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+          <p>Runs VSTest command line tool (VSTest.Console.exe) on a group of assemblies.</p>
 
-          <code onmouseout="hideTip(event, '900', 900)" onmouseover="showTip(event, '900', 900)">
-            CurrentDirectory
-          </code>
-          <div class="tip" id="900">
-            <strong>Signature:</strong> string<br />
-              <strong>Modifiers:</strong> abstract<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L89-89" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+<h2>Parameters</h2>
 
-          <code onmouseout="hideTip(event, '901', 901)" onmouseover="showTip(event, '901', 901)">
-            FakeDirectory
-          </code>
-          <div class="tip" id="901">
-            <strong>Signature:</strong> string<br />
-              <strong>Modifiers:</strong> abstract<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L90-90" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+<ul>
+<li><code>setParams</code> - Function used to manipulate the default VSTestParams values.</li>
+<li><code>assemblies</code> - Sequence of one or more assemblies containing Microsoft Visual Studio Unit Test Framework unit tests.</li>
+</ul>
 
-          <code onmouseout="hideTip(event, '902', 902)" onmouseover="showTip(event, '902', 902)">
-            FakeDirectory
-          </code>
-          <div class="tip" id="902">
-            <strong>Signature:</strong> string<br />
-              <strong>Modifiers:</strong> abstract<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L90-90" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+<h2>Sample usage</h2>
 
-          <code onmouseout="hideTip(event, '903', 903)" onmouseover="showTip(event, '903', 903)">
-            SendMessage(message)
-          </code>
-          <div class="tip" id="903">
-            <strong>Signature:</strong> message:string -&gt; unit<br />
-              <strong>Modifiers:</strong> abstract<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L88-88" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Static members</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Static member</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '904', 904)" onmouseover="showTip(event, '904', 904)">
-            Default
-          </code>
-          <div class="tip" id="904">
-            <strong>Signature:</strong> CommandEnvironment<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L93-93" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>The default environment.</p>
+<pre><code>Target "Test" (fun _ -&gt;
+    !! (testDir + @"\*.Tests.dll") 
+      |&gt; VSTest (fun p -&gt; { p with SettingsPath = "Local.RunSettings" })
+)
+</code></pre>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '905', 905)" onmouseover="showTip(event, '905', 905)">
-            Default
+          <code onmouseout="hideTip(event, '605', 605)" onmouseover="showTip(event, '605', 605)">
+            VSTestDefaults 
           </code>
-          <div class="tip" id="905">
-            <strong>Signature:</strong> CommandEnvironment<br />
+          <div class="tip" id="605">
+            <strong>Signature:</strong> VSTestParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Boot.fs#L93-93" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/VSTest.fs#L60-60" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>The default environment.</p>
+          <p>VSTest default parameters.</p>
 
         </td>
       </tr>
