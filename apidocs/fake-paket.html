@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>MSpecParams - FAKE - F# Make</title>
+    <title>Paket - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,184 +36,131 @@
 
 
 
-<h1>MSpecParams</h1>
+<h1>Paket</h1>
 <div class="xmldoc">
-<p>Parameter type to configure the MSpec runner.</p>
+<p>Contains helper functions and task which allow to inspect, create and publish <a href="https://www.nuget.org/">NuGet</a> packages with <a href="http://fsprojects.github.io/Paket/index.html">Paket</a>.</p>
 </div>
-  <h3>Record Fields</h3>
+
+<!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="fake-paket-paketpackparams.html">PaketPackParams</a>
+          </td>
+          <td class="xmldoc"><p>Paket pack parameter type</p>
+</td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="fake-paket-paketpushparams.html">PaketPushParams</a>
+          </td>
+          <td class="xmldoc"><p>Paket push parameter type</p>
+</td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+  <h3>Functions and values</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Record Field</td><td>Description</td></tr>
+      <tr><td>Function or value</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1204', 1204)" onmouseover="showTip(event, '1204', 1204)">
-            ErrorLevel
+          <code onmouseout="hideTip(event, '351', 351)" onmouseover="showTip(event, '351', 351)">
+            Pack setParams rootDir
           </code>
-          <div class="tip" id="1204">
-            <strong>Signature:</strong> TestRunnerErrorLevel<br />
+          <div class="tip" id="351">
+            <strong>Signature:</strong> setParams:(PaketPackParams -&gt; PaketPackParams) -&gt; rootDir:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L28-28" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L47-47" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>An error level setting to specify whether a failed test should break the build</p>
+          <p>Creates a new NuGet package by using Paket pack on all paket.template files in the given root directory.</p>
+
+<h2>Parameters</h2>
+
+<ul>
+<li><code>setParams</code> - Function used to manipulate the default parameters.</li>
+<li><code>rootDir</code> - The paket.template files.</li>
+</ul>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1205', 1205)" onmouseover="showTip(event, '1205', 1205)">
-            ExcludeTags
+          <code onmouseout="hideTip(event, '352', 352)" onmouseover="showTip(event, '352', 352)">
+            PaketPackDefaults ()
           </code>
-          <div class="tip" id="1205">
-            <strong>Signature:</strong> string list<br />
+          <div class="tip" id="352">
+            <strong>Signature:</strong> unit -&gt; PaketPackParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L22-22" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L18-18" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Tests with theses tags are ignored by MSpec</p>
+          <p>Paket pack default parameters</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1206', 1206)" onmouseover="showTip(event, '1206', 1206)">
-            HtmlOutputDir
+          <code onmouseout="hideTip(event, '353', 353)" onmouseover="showTip(event, '353', 353)">
+            PaketPushDefaults ()
           </code>
-          <div class="tip" id="1206">
-            <strong>Signature:</strong> string<br />
+          <div class="tip" id="353">
+            <strong>Signature:</strong> unit -&gt; PaketPushParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L14-14" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L35-35" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Output directory for html reports (optional).</p>
+          <p>Paket push default parameters</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1207', 1207)" onmouseover="showTip(event, '1207', 1207)">
-            IncludeTags
+          <code onmouseout="hideTip(event, '354', 354)" onmouseover="showTip(event, '354', 354)">
+            Push setParams packages
           </code>
-          <div class="tip" id="1207">
-            <strong>Signature:</strong> string list<br />
+          <div class="tip" id="354">
+            <strong>Signature:</strong> setParams:(PaketPushParams -&gt; PaketPushParams) -&gt; packages:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L24-24" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L70-70" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Tests with theses tags are included by MSpec</p>
+          <p>Pushes a NuGet package to the server by using Paket push.</p>
 
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+<h2>Parameters</h2>
 
-          <code onmouseout="hideTip(event, '1208', 1208)" onmouseover="showTip(event, '1208', 1208)">
-            Silent
-          </code>
-          <div class="tip" id="1208">
-            <strong>Signature:</strong> bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L20-20" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Can be used to run MSpec in silent mode.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1209', 1209)" onmouseover="showTip(event, '1209', 1209)">
-            TimeOut
-          </code>
-          <div class="tip" id="1209">
-            <strong>Signature:</strong> TimeSpan<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L26-26" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>A timeout for the test runner</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1210', 1210)" onmouseover="showTip(event, '1210', 1210)">
-            ToolPath
-          </code>
-          <div class="tip" id="1210">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L12-12" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>FileName of the mspec runner exe. Use mspec-clr4.exe if you are on .NET 4.0 or above.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1211', 1211)" onmouseover="showTip(event, '1211', 1211)">
-            WorkingDir
-          </code>
-          <div class="tip" id="1211">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L18-18" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Working directory (optional)</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1212', 1212)" onmouseover="showTip(event, '1212', 1212)">
-            XmlOutputPath
-          </code>
-          <div class="tip" id="1212">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L16-16" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Output file path for xml reports (optional).</p>
+<ul>
+<li><code>setParams</code> - Function used to manipulate the default parameters.</li>
+<li><code>packages</code> - The .nupkg files.</li>
+</ul>
 
         </td>
       </tr>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>MSpecParams - FAKE - F# Make</title>
+    <title>PaketPushParams - FAKE - F# Make</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Steffen Forkmann, Mauricio Scheffer, Colin Bull">
@@ -36,9 +36,9 @@
 
 
 
-<h1>MSpecParams</h1>
+<h1>PaketPushParams</h1>
 <div class="xmldoc">
-<p>Parameter type to configure the MSpec runner.</p>
+<p>Paket push parameter type</p>
 </div>
   <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
@@ -49,172 +49,73 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1204', 1204)" onmouseover="showTip(event, '1204', 1204)">
-            ErrorLevel
+          <code onmouseout="hideTip(event, '1414', 1414)" onmouseover="showTip(event, '1414', 1414)">
+            AccessKey
           </code>
-          <div class="tip" id="1204">
-            <strong>Signature:</strong> TestRunnerErrorLevel<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L28-28" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>An error level setting to specify whether a failed test should break the build</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1205', 1205)" onmouseover="showTip(event, '1205', 1205)">
-            ExcludeTags
-          </code>
-          <div class="tip" id="1205">
-            <strong>Signature:</strong> string list<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L22-22" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Tests with theses tags are ignored by MSpec</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1206', 1206)" onmouseover="showTip(event, '1206', 1206)">
-            HtmlOutputDir
-          </code>
-          <div class="tip" id="1206">
+          <div class="tip" id="1414">
             <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L14-14" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L32-32" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Output directory for html reports (optional).</p>
-
+          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1207', 1207)" onmouseover="showTip(event, '1207', 1207)">
-            IncludeTags
+          <code onmouseout="hideTip(event, '1415', 1415)" onmouseover="showTip(event, '1415', 1415)">
+            PublishUrl
           </code>
-          <div class="tip" id="1207">
-            <strong>Signature:</strong> string list<br />
+          <div class="tip" id="1415">
+            <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L24-24" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L31-31" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Tests with theses tags are included by MSpec</p>
-
+          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1208', 1208)" onmouseover="showTip(event, '1208', 1208)">
-            Silent
-          </code>
-          <div class="tip" id="1208">
-            <strong>Signature:</strong> bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L20-20" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Can be used to run MSpec in silent mode.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1209', 1209)" onmouseover="showTip(event, '1209', 1209)">
+          <code onmouseout="hideTip(event, '1416', 1416)" onmouseover="showTip(event, '1416', 1416)">
             TimeOut
           </code>
-          <div class="tip" id="1209">
+          <div class="tip" id="1416">
             <strong>Signature:</strong> TimeSpan<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L26-26" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L30-30" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>A timeout for the test runner</p>
-
+          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1210', 1210)" onmouseover="showTip(event, '1210', 1210)">
+          <code onmouseout="hideTip(event, '1417', 1417)" onmouseover="showTip(event, '1417', 1417)">
             ToolPath
           </code>
-          <div class="tip" id="1210">
+          <div class="tip" id="1417">
             <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L12-12" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L29-29" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>FileName of the mspec runner exe. Use mspec-clr4.exe if you are on .NET 4.0 or above.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1211', 1211)" onmouseover="showTip(event, '1211', 1211)">
-            WorkingDir
-          </code>
-          <div class="tip" id="1211">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L18-18" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Working directory (optional)</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '1212', 1212)" onmouseover="showTip(event, '1212', 1212)">
-            XmlOutputPath
-          </code>
-          <div class="tip" id="1212">
-            <strong>Signature:</strong> string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSpecHelper.fs#L16-16" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Output file path for xml reports (optional).</p>
-
+          
         </td>
       </tr>
     </tbody>
