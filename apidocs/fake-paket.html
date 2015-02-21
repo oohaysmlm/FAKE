@@ -78,24 +78,23 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '351', 351)" onmouseover="showTip(event, '351', 351)">
-            Pack setParams rootDir
+            Pack setParams
           </code>
           <div class="tip" id="351">
-            <strong>Signature:</strong> setParams:(PaketPackParams -&gt; PaketPackParams) -&gt; rootDir:string -&gt; unit<br />
+            <strong>Signature:</strong> setParams:(PaketPackParams -&gt; PaketPackParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L47-47" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L49-49" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Creates a new NuGet package by using Paket pack on all paket.template files in the given root directory.</p>
+          <p>Creates a new NuGet package by using Paket pack on all paket.template files in the working directory.</p>
 
 <h2>Parameters</h2>
 
 <ul>
 <li><code>setParams</code> - Function used to manipulate the default parameters.</li>
-<li><code>rootDir</code> - The paket.template files.</li>
 </ul>
 
         </td>
@@ -111,7 +110,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L18-18" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L19-19" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -130,7 +129,7 @@
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L35-35" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L38-38" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -142,24 +141,23 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '354', 354)" onmouseover="showTip(event, '354', 354)">
-            Push setParams packages
+            Push setParams
           </code>
           <div class="tip" id="354">
-            <strong>Signature:</strong> setParams:(PaketPushParams -&gt; PaketPushParams) -&gt; packages:seq&lt;string&gt; -&gt; unit<br />
+            <strong>Signature:</strong> setParams:(PaketPushParams -&gt; PaketPushParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L70-70" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/PaketHelper.fs#L71-71" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Pushes a NuGet package to the server by using Paket push.</p>
+          <p>Pushes all NuGet packages in the working dir to the server by using Paket push.</p>
 
 <h2>Parameters</h2>
 
 <ul>
 <li><code>setParams</code> - Function used to manipulate the default parameters.</li>
-<li><code>packages</code> - The .nupkg files.</li>
 </ul>
 
         </td>
